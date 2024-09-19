@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Resetando o estilo padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilos para o corpo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Barra de Navegação */
+.navbar {
+  background-color: #000000;
+  padding: 10px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .nav-links ion-icon {
+  font-size: 1.5em;
+}
+
+.navbar .nav-links .text {
+  display: inline;
+}
+
+/* Seção de Seleção de Idioma */
+.language-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.language-section h1 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Botões de Idioma */
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.language-buttons img {
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.language-buttons img:hover {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+.footer {
+  background-color: #222;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  font-size: 0.9em;
+}
+
+.footer p {
+  margin: 0;
+}

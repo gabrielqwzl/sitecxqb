@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definições - CXQB</title>
+    <link rel="stylesheet" href="/CSS/config.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="/imagens/sinais-de-codigo.png" type="image/png" />
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="/BASE HTML/index.html"><ion-icon name="home-outline"></ion-icon><span class="text">Início</span></a></li>
+                <li><a href="#"><ion-icon name="language-outline"></ion-icon><span class="text">Idioma</span></a></li>
+                <li><a href="#"><ion-icon name="logo-discord"></ion-icon><span class="text">Discord</span></a></li>
+                <li><a href="/BASE HTML/configuracoes.html"><ion-icon name="settings-outline"></ion-icon><span class="text">Definições</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Definições -->
+    <section id="settings" class="section settings-section container">
+        <h2>Definições de Conta</h2>
+        <form>
+            <!-- Alteração de Apelido -->
+            <label for="nickname">Apelido (troca disponível a cada 2 semanas):</label>
+            <input type="text" id="nickname" name="nickname" required>
+            <p>Seu apelido atual: <strong>SeuApelido#1234</strong></p>
+
+            <!-- Alteração de Senha -->
+            <label for="current-password">Senha Atual:</label>
+            <input type="password" id="current-password" name="current-password" required>
+            <label for="new-password">Nova Senha:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <label for="confirm-password">Confirmar Nova Senha:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <!-- Idioma Preferencial -->
+            <label for="preferred-language">Idioma Preferencial:</label>
+            <select id="preferred-language" name="preferred-language" required>
+                <option value="pt-br">Português</option>
+                <option value="en">Inglês</option>
+            </select>
+
+            <!-- Nacionalidade -->
+            <label for="nationality">Nacionalidade:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <!-- Membro Desde -->
+            <p>Membro desde: <strong>01/01/2020</strong></p>
+
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Desenvolvido por João Gabriel &copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

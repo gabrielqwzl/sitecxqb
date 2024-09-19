@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Idioma - CXQB</title>
+    <link rel="stylesheet" href="/CSS/idioma.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="/imagens/sinais-de-codigo.png" type="image/png" />
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="/BASE HTML/index.html"><ion-icon name="home-outline"></ion-icon><span class="text">Início</span></a></li>
+                <li><a href="/BASE HTML/idioma.html"><ion-icon name="language-outline"></ion-icon><span class="text">Idioma</span></a></li>
+                <li><a href="https://discord.com/invite/yourdiscordlink" target="_blank"><ion-icon name="logo-discord"></ion-icon><span class="text">Discord</span></a></li>
+                <li><a href="/BASE HTML/configuracoes.html"><ion-icon name="settings-outline"></ion-icon><span class="text">Definições</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Seleção de Idioma -->
+    <section class="section language-section">
+        <h1>Selecione o Idioma</h1>
+        <div class="language-buttons">
+            <!-- Botões de idioma com bandeiras -->
+            <img src="/imagens/bandeira-pt-br.jpg" alt="Português" title="Português" onclick="changeLanguage('pt-br')">
+            <img src="/imagens/bandeira-en.png" alt="Inglês" title="Inglês" onclick="changeLanguage('en')">
+            <img src="/imagens/bandeira-es.png" alt="Espanhol" title="Espanhol" onclick="changeLanguage('es')">
+            <!-- Adicione mais idiomas conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Desenvolvido por João Gabriel &copy; 2024</p>
+    </footer>
+
+    <script>
+        function changeLanguage(languageCode) {
+            // Função para alterar o idioma - esta função pode redirecionar o usuário para uma URL específica ou salvar a seleção em um localStorage/cookie
+            alert('Idioma selecionado: ' + languageCode);
+            // Exemplo de redirecionamento - ajuste a URL conforme necessário
+            // window.location.href = 'home.html?lang=' + languageCode;
+        }
+    </script>
+</body>
+
+</html>

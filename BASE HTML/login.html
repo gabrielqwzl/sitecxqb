@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Seja bem-vindo à CXQB!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/CSS/login.css'>
+</head>
+<body>
+    <section>
+        <!-- Plano de Fundo -->
+        
+        <!-- (Blocos de fundo) -->
+        <div class="signin">
+            <div class="content">
+                <div class="logo">
+                    <img src="/IMAGENS/logoCXQB.svg" alt="Logo CXQB" width="150">
+                </div>
+                <h2>Entrar</h2>
+                <form id="loginForm" class="form">
+                    <div class="inputBox">
+                        <input type="text" id="username" name="username" required> <i>Nome de Usuário</i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" id="password" name="password" required> <i>Senha</i>
+                    </div>
+                    <div class="links">
+                        <a href="#">Esqueci a senha</a>
+                        <a href="#">Sair</a>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do formulário
+
+            // Coletar os dados do formulário
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Enviar os dados para o servidor
+            fetch('/login', { // Substitua com o caminho correto do seu endpoint de login
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Redirecionar para a tela principal se o login for bem-sucedido
+                    window.location.href = '/BASE HTML/index.html'; // Substitua com o caminho para a tela principal
+                } else {
+                    // Exibir mensagem de erro
+                    alert('Nome de usuário ou senha inválidos');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+        });
+    </script>
+</body>
+</html>

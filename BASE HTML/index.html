@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CXQB - Campeonato de Corrida</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="/imagens/sinais-de-codigo.png" type="image/png" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="/BASE HTML/index.html"><ion-icon name="home-outline"></ion-icon><span
+                            class="text">Início</span></a></li>
+                <li><a href="/BASE HTML/idioma.html"><ion-icon name="language-outline"></ion-icon><span
+                            class="text">Idioma</span></a></li>
+                <li><a href="https://discord.gg/sxfWJtEgEC" target="_blank"><ion-icon
+                            name="logo-discord"></ion-icon><span class="text">Discord</span></a></li>
+                <li><a href="/BASE HTML/configuracoes.html"><ion-icon name="settings-outline"></ion-icon><span
+                            class="text">Definições</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h1>Bem-vindo ao CarX Quick Battle.</h1>
+            <p>Campeonatos rápidos e dinâmicos, entre na fila e se divirta!</p>
+            <div class="battle-key">
+                <h2>Chave de Batalha Atual</h2>
+                <div class="battle-bracket"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="about" class="section about-section">
+        <h2>Sobre Nós</h2>
+        <img src="/imagens/IMG_CXQB.png" alt="CXQB Imagem" class="about-img">
+        <p>Sejam bem-vindos à CXQB! Oferecemos uma forma de competir rápida e dinâmica! Basta entrar na fila e o BOT
+            cuidará do resto!</p>
+    </section>
+
+    <!-- Temporadas -->
+    <section id="seasons" class="section seasons-section">
+        <h2>Temporada Atual</h2>
+        <p>Aqui você pode conferir as estatísticas de cada jogador, clique no jogador para ver mais informações!</p>
+        <input type="text" placeholder="Pesquisar jogador..." class="search-bar">
+        <div class="player-list"></div>
+        <button class="show-more" onclick="toggleStats()">Mostrar mais</button>
+
+        <div id="stats" class="stats hidden">
+            <!-- Conteúdo da aba de estatísticas -->
+            <h3>Estatísticas Detalhadas</h3>
+            <p>Aqui estão as estatísticas detalhadas...</p>
+        </div>
+    </section>
+
+    <!-- Julgamento -->
+    <section id="judgement" class="section judgement-section">
+        <h2>Julgamento</h2>
+        <p>Juízes podem jogar? Sim, mas somente se houverem 3 presentes! Veja as regras completas <a
+                href="https://docs.google.com/document/d/1QHqoRmVOLnVRaEkOdQMnbhcncpL-gka6fxBEsuEh_lg/edit?usp=sharing"
+                target="_blank">aqui</a>.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Desenvolvido por João Gabriel &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade da aba de estatísticas
+        function toggleStats() {
+            var stats = document.getElementById('stats');
+            stats.classList.toggle('show');
+        }
+    </script>
+    <script src="/JAVASCRIPT/nav.js"></script>
+</body>
+
+</html>

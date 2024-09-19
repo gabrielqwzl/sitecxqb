@@ -1,0 +1,88 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    background-color: #1F2937;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilo para a página de conquistas */
+.achievements-page {
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00ADB5;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.achievement-category {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #2D3748;
+    /* Cor de fundo das seções */
+    border-radius: 8px;
+    position: relative;
+    /* Necessário para posicionar o emblema */
+}
+
+.achievement-icon {
+    position: absolute;
+    top: -2rem;
+    /* Ajuste a posição conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 4rem;
+    background-color: #00ADB5;
+    /* Cor de fundo para destaque */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.achievement-icon img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.achievement-category h2 {
+    font-size: 2rem;
+    color: #00ADB5;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    /* Espaço para o emblema */
+}
+
+.achievement-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-category ul li {
+    font-size: 1.2rem;
+    color: #D1D5DB;
+    padding: 0.5rem 0;
+}
+
+.achievement-category ul li::before {
+    content: '✔️';
+    /* Adiciona um ícone de marca de seleção */
+    color: #00ADB5;
+    margin-right: 0.5rem;
+}
+
+/* Estilos para a barra de navegação e rodapé */
+.navbar,
+.footer {
+    background-color: #1F2937;
+    color: #9CA3AF;
+    text-align: center;
+    padding: 1.5rem;
+}

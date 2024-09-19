@@ -1,0 +1,377 @@
+/* Reset de margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+    background-color: #1F2937;
+    /* Fundo mais escuro e elegante */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    /* Garante que a navbar esteja no topo */
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    transition: top 0.4s;
+    /* Transição suave para esconder e mostrar a navbar */
+}
+
+.navbar.hidden {
+    top: -80px;
+    /* Ajuste a altura conforme necessário */
+}
+
+/* Outros estilos */
+.navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar .nav-links a {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #4B5563;
+    /* Cor de hover suave */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para a página inicial */
+.home-section {
+    background: url('/IMAGENS/BACK02.gif') no-repeat center center;
+    /* Imagem de fundo com overlay */
+    background-size: cover;
+    /* Faz com que o fundo cubra toda a área da viewport */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* Garante que a seção tenha pelo menos a altura da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0;
+    /* Remove padding para evitar bordas brancas */
+}
+
+/* Adiciona a nova imagem nos espaços indicados */
+.home-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/IMAGENS/NEW_IMAGE.png') no-repeat center center;
+    /* Substitua com a URL da nova imagem */
+    background-size: contain;
+    opacity: 0.8;
+    z-index: 0;
+    /* Coloca o novo fundo atrás do conteúdo */
+}
+
+/* Mantém o overlay escuro */
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 41, 55, 0.8);
+    /* Overlay escuro */
+    z-index: 1;
+    /* Coloca o overlay acima do fundo */
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    /* Garante que o conteúdo fique acima do overlay */
+}
+
+/* Efeito de rolagem no título */
+.home-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ADB5;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+/* Efeito de rolagem no parágrafo */
+.home-content p {
+    font-size: 1.3rem;
+    color: #D1D5DB;
+    margin-bottom: 2rem;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+/* Efeito de rolagem */
+@keyframes scrollEffect {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        /* Ajuste o valor conforme necessário */
+    }
+}
+
+/* Aplicar o efeito de rolagem */
+.scroll-effect {
+    animation: scrollEffect 10s infinite alternate;
+    /* Define a animação de rolagem */
+}
+
+/* Adiciona a nova classe .scroll-effect nos elementos desejados */
+.home-content h1.scroll-effect,
+.home-content p.scroll-effect {
+    animation: scrollEffect 10s infinite alternate;
+}
+
+/* Outros estilos permanecem os mesmos */
+.battle-key h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #fcfcfc;
+}
+
+.battle-bracket {
+    width: 350px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.battle-bracket:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos da seção "Sobre Nós" */
+.about-section {
+    background-color: #1F2937;
+    color: #F3F4F6;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ADB5;
+    font-weight: 600;
+}
+
+.about-img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #E5E7EB;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Estilos da seção "Temporadas" */
+.seasons-section {
+    background-color: #111827;
+    color: #E5E7EB;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.seasons-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ADB5;
+    font-weight: 600;
+}
+
+.search-bar {
+    padding: 0.8rem;
+    width: 350px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #374151;
+    color: #FFFFFF;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: #9CA3AF;
+}
+
+.search-bar:focus {
+    background-color: #4B5563;
+}
+
+.player-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.show-more {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: #00ADB5;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.show-more:hover {
+    background-color: #008C9C;
+}
+
+/* Estilos da seção "Julgamento" */
+.judgement-section {
+    background-color: #1F2937;
+    color: #F3F4F6;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.judgement-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ADB5;
+    font-weight: 600;
+}
+
+.judgement-section p {
+    font-size: 1.1rem;
+    color: #D1D5DB;
+}
+
+.judgement-section p a {
+    color: #00ADB5;
+    text-decoration: none;
+}
+
+.judgement-section p a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #1F2937;
+    text-align: center;
+    padding: 1.5rem;
+    color: #9CA3AF;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efeitos de animação e transição */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1,
+h2,
+p,
+.battle-bracket,
+.about-section,
+.seasons-section,
+.judgement-section {
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Estilos para a aba de estatísticas */
+.stats {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background-color: #2D3748; /* Cor de fundo escura com mais contraste */
+    color: #E2E8F0; /* Cor clara para o texto */
+    border-radius: 8px;
+    padding: 0 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+}
+
+.stats.show {
+    max-height: 800px; /* Ajuste conforme o conteúdo */
+    padding: 1rem 2rem;
+}
+
+/* Estilo para o botão "Mostrar mais" */
+.show-more {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: #00BFAE; /* Cor de fundo atraente */
+    border: none;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold; /* Fonte em negrito para destaque */
+}
+
+.show-more:hover {
+    background-color: #009B8E; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Efeito de escala no hover */
+}
+
+/* Transição suave para o conteúdo */
+.stats h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #00BFAE; /* Cor de destaque */
+    border-bottom: 2px solid #00BFAE; /* Linha de destaque abaixo do título */
+    padding-bottom: 0.5rem;
+}
+
+.stats p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
